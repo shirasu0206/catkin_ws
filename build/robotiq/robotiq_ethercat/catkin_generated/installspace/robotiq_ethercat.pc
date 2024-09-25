@@ -1,4 +1,4 @@
-prefix=/home/hi-ragi/catkin_ws/install
+prefix=/home/syu/catkin_ws/install
 
 Name: robotiq_ethercat
 Description: Description of robotiq_ethercat

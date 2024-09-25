@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "/home/hi-ragi/catkin_ws/devel/share/common-lisp/ros/vgn/msg/GraspConfig.lisp"
-  "/home/hi-ragi/catkin_ws/devel/share/common-lisp/ros/vgn/srv/GetMapCloud.lisp"
-  "/home/hi-ragi/catkin_ws/devel/share/common-lisp/ros/vgn/srv/GetSceneCloud.lisp"
-  "/home/hi-ragi/catkin_ws/devel/share/common-lisp/ros/vgn/srv/PredictGrasps.lisp"
+  "/home/syu/catkin_ws/devel/share/common-lisp/ros/vgn/msg/GraspConfig.lisp"
+  "/home/syu/catkin_ws/devel/share/common-lisp/ros/vgn/srv/GetMapCloud.lisp"
+  "/home/syu/catkin_ws/devel/share/common-lisp/ros/vgn/srv/GetSceneCloud.lisp"
+  "/home/syu/catkin_ws/devel/share/common-lisp/ros/vgn/srv/PredictGrasps.lisp"
   "CMakeFiles/vgn_generate_messages_lisp"
 )
 

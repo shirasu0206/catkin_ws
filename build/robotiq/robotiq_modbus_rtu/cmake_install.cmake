@@ -1,8 +1,8 @@
-# Install script for directory: /home/hi-ragi/catkin_ws/src/robotiq/robotiq_modbus_rtu
+# Install script for directory: /home/syu/catkin_ws/src/robotiq/robotiq_modbus_rtu
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/hi-ragi/catkin_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/syu/catkin_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,21 +38,21 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/home/hi-ragi/catkin_ws/build/robotiq/robotiq_modbus_rtu/catkin_generated/safe_execute_install.cmake")
+  include("/home/syu/catkin_ws/build/robotiq/robotiq_modbus_rtu/catkin_generated/safe_execute_install.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/hi-ragi/catkin_ws/build/robotiq/robotiq_modbus_rtu/catkin_generated/installspace/robotiq_modbus_rtu.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/syu/catkin_ws/build/robotiq/robotiq_modbus_rtu/catkin_generated/installspace/robotiq_modbus_rtu.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robotiq_modbus_rtu/cmake" TYPE FILE FILES
-    "/home/hi-ragi/catkin_ws/build/robotiq/robotiq_modbus_rtu/catkin_generated/installspace/robotiq_modbus_rtuConfig.cmake"
-    "/home/hi-ragi/catkin_ws/build/robotiq/robotiq_modbus_rtu/catkin_generated/installspace/robotiq_modbus_rtuConfig-version.cmake"
+    "/home/syu/catkin_ws/build/robotiq/robotiq_modbus_rtu/catkin_generated/installspace/robotiq_modbus_rtuConfig.cmake"
+    "/home/syu/catkin_ws/build/robotiq/robotiq_modbus_rtu/catkin_generated/installspace/robotiq_modbus_rtuConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robotiq_modbus_rtu" TYPE FILE FILES "/home/hi-ragi/catkin_ws/src/robotiq/robotiq_modbus_rtu/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robotiq_modbus_rtu" TYPE FILE FILES "/home/syu/catkin_ws/src/robotiq/robotiq_modbus_rtu/package.xml")
 endif()
 

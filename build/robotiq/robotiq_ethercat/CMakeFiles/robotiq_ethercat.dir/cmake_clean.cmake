@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/hi-ragi/catkin_ws/devel/lib/librobotiq_ethercat.pdb"
-  "/home/hi-ragi/catkin_ws/devel/lib/librobotiq_ethercat.so"
+  "/home/syu/catkin_ws/devel/lib/librobotiq_ethercat.pdb"
+  "/home/syu/catkin_ws/devel/lib/librobotiq_ethercat.so"
   "CMakeFiles/robotiq_ethercat.dir/src/ethercat_manager.cpp.o"
 )
 

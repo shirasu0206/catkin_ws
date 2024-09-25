@@ -1,2 +1,2 @@
-set(vgn_MESSAGE_FILES "/home/hi-ragi/catkin_ws/src/vgn/msg/GraspConfig.msg")
-set(vgn_SERVICE_FILES "/home/hi-ragi/catkin_ws/src/vgn/srv/GetMapCloud.srv;/home/hi-ragi/catkin_ws/src/vgn/srv/GetSceneCloud.srv;/home/hi-ragi/catkin_ws/src/vgn/srv/PredictGrasps.srv")
+set(vgn_MESSAGE_FILES "/home/syu/catkin_ws/src/vgn/msg/GraspConfig.msg")
+set(vgn_SERVICE_FILES "/home/syu/catkin_ws/src/vgn/srv/GetMapCloud.srv;/home/syu/catkin_ws/src/vgn/srv/GetSceneCloud.srv;/home/syu/catkin_ws/src/vgn/srv/PredictGrasps.srv")

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/hi-ragi/catkin_ws/devel/include/robotiq_2f_gripper_control/Robotiq2FGripper_robot_input.h"
-  "/home/hi-ragi/catkin_ws/devel/include/robotiq_2f_gripper_control/Robotiq2FGripper_robot_output.h"
+  "/home/syu/catkin_ws/devel/include/robotiq_2f_gripper_control/Robotiq2FGripper_robot_input.h"
+  "/home/syu/catkin_ws/devel/include/robotiq_2f_gripper_control/Robotiq2FGripper_robot_output.h"
   "CMakeFiles/robotiq_2f_gripper_control_generate_messages_cpp"
 )
 

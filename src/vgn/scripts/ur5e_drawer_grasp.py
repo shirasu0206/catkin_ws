@@ -44,9 +44,9 @@ class Ur5eGraspController(object):
         msg = geometry_msgs.msg.PoseStamped()
         msg.header.frame_id = self.base_frame
         msg.pose.position.x = -0.12
-        msg.pose.position.y = -0.87
-        msg.pose.position.z = 0.195
-        self.moveit.scene.add_box("table", msg, size=(0.347, 0.02, 0.347))
+        msg.pose.position.y = -1
+        msg.pose.position.z = 0.47
+        #self.moveit.scene.add_box("table", msg, size=(1, 0.02, 1))
 
     def init_services(self):
         self.reset_map = rospy.ServiceProxy("reset_map", Empty)
@@ -59,7 +59,7 @@ class Ur5eGraspController(object):
         self.vis.clear()
         self.gripper.gripper_control(100)
 
-        self.vis.roi(self.task_frame, 0.34)
+        self.vis.roi(self.task_frame, 0.15)
 
         rospy.loginfo("Reconstructing scene")
         self.scan_scene()
@@ -90,40 +90,11 @@ class Ur5eGraspController(object):
 
         # Execute grasp
         rospy.loginfo("Executing grasp")
-        self.moveit.goto([1.7301 ,-1.5518, -1.9879, -0.2827, 1.5261, -0.0168])
-        #success = self.execute_grasp(grasp)
-        #ここから仮のgraspプログラム
-        grasp_pose_data = res.grasps[0].pose
-
-        # 位置情報を抽出
-        position_x = -(grasp_pose_data.position.x -0.12)
-        position_y = -(-grasp_pose_data.position.z +0.87 -0.2)
-        position_z = grasp_pose_data.position.y +0.195
-
-        # 姿勢（クォータニオン）情報を抽出
-        #orientation_x = grasp_pose_data.orientation.x
-        orientation_x = 0
-        orientation_y = 1
-        orientation_z = 0
-        orientation_w = 0
+        self.moveit.goto([1.647, -2.568, -2.2 , 1.624, 1.491, 0])
+        success = self.execute_grasp(grasp)
         
-        # Transformオブジェクトを作成
-        target_transform = Transform(
-            Rotation.from_quat([orientation_x, orientation_y, orientation_z, orientation_w]), 
-            [position_x, position_y, position_z]
-        )
-        rospy.loginfo(f"target:{target_transform}")
-        self.moveit.goto(target_transform)
-
-        '''
-        rospy.loginfo("Dropping object")
-        self.moveit.goto([3.1415, -1.5708, -1.5708, -1.5708, 1.5708, 0.0])
-        self.gripper.gripper_control(100)
-
-        self.moveit.goto([1.7301 ,-1.5518, -1.9879, -0.2827, 1.5261, -0.0168])
-        '''
     def scan_scene(self):
-        self.moveit.goto([1.7301 ,-1.5518, -1.9879, -0.2827, 1.5261, -0.0168])
+        self.moveit.goto([1.647, -2.568, -2.2 , 1.624, 1.491, 0])
         self.reset_map()
         self.toggle_integration(True)
         for joint_target in self.scan_joints:
@@ -132,11 +103,7 @@ class Ur5eGraspController(object):
 
     def execute_grasp(self, grasp):
         # Transform to base frame
-        rospy.loginfo(f"res:{res}")
-        rospy.loginfo(f"grasp.pose:{grasp.pose}")
         grasp.pose = self.T_base_task * grasp.pose
-        rospy.loginfo(f"grasp:{grasp}")
-        rospy.loginfo(f"grasp.pose:{grasp.pose}")
         
         # Ensure that the camera is pointing forward.
         rot = grasp.pose.rotation
@@ -146,19 +113,59 @@ class Ur5eGraspController(object):
 
         T_base_grasp = grasp.pose
 
-        T_grasp_pregrasp = Transform(Rotation.identity(), [0.0, 0.05, 0])
-        T_grasp_retreat = Transform(Rotation.identity(), [0.0, 0.2, 0])
-        T_base_pregrasp = T_base_grasp * T_grasp_pregrasp
-        T_base_retreat = T_base_grasp * T_grasp_retreat
-
+        T_grasp_pregrasp = Transform(Rotation.identity(), [0.0, 0.1, 0])
+        T_grasp_grasp = Transform(Rotation.identity(), [0.0, 0.03, 0])
+        T_grasp_retreat = Transform(Rotation.identity(), [0.0, 0.22, 0])
+        T_base_pregrasp = T_grasp_pregrasp * T_base_grasp
+        T_base_retreat = T_grasp_retreat * T_base_grasp
+        T_base_grasp = T_grasp_grasp * T_base_grasp
+        
+        rospy.loginfo("a")
         self.moveit.goto(T_base_pregrasp * self.grasp_ee_offset, velocity_scaling=0.2)
+        rospy.loginfo("b")
         self.moveit.gotoL(T_base_grasp * self.grasp_ee_offset)
+        rospy.loginfo("c")
         self.gripper.gripper_control(0)
+        rospy.loginfo("d")
         self.moveit.gotoL(T_base_retreat * self.grasp_ee_offset)
+        self.gripper.gripper_control(100)
+        self.moveit.goto([1.647, -2.568, -2.2 , 1.624, 1.491, 0])
+        rospy.sleep(2)
+        #ピッキング
+        self.moveit.goto([1.645, -1.862, -2.275, 0.993, 1.490, 0])
+        self.gripper.gripper_control(80)
+        self.moveit.goto([1.306, -2.288, -0.616, -1.721, 2.064, -0.275])
+        self.moveit.goto([1.620, -1.899, -1.252, -1.151, 1.551, 0.049])
+        self.moveit.goto([2.071, -1.838, -1.405, -1.159, 0.890, 0.303])
+        self.moveit.goto([1.604, -2.431, -0.403, -1.880, 1.575, 0.033])
+        rospy.sleep(2)
+        self.moveit.goto([1.739, -2.601, -0.188, -1.936, 1.278, 0.951])
+        self.moveit.goto([1.739, -2.497, -0.611, -1.619, 1.277, 0.953])
+        self.gripper.gripper_control(0)
+        self.moveit.goto([1.739, -2.601, -0.188, -1.936, 1.278, 0.951])
+        self.moveit.goto([2.537, -1.556, -1.669, -1.488, 1.575, -0.018])
+        self.gripper.gripper_control(80)
+        self.moveit.goto([1.645, -1.862, -2.275, 0.993, 1.490, 0])
+        self.moveit.goto([1.647, -2.568, -2.2 , 1.624, 1.491, 0])
+        rospy.sleep(2)
+
+
+
+        #閉める
+        self.gripper.gripper_control(100)
+        self.moveit.goto([1.647, -2.568, -2.2 , 1.624, 1.491, 0])
+        self.moveit.gotoL(T_base_retreat * self.grasp_ee_offset)
+        self.gripper.gripper_control(0)
+        self.moveit.gotoL(T_base_grasp * self.grasp_ee_offset)
+        self.gripper.gripper_control(100)
+        self.moveit.goto([1.647, -2.568, -2.2 , 1.624, 1.491, 0])
+
+
 
         T_retreat_lift_base = Transform(Rotation.identity(), [0.0, 0.0, 0.1])
         T_base_lift = T_retreat_lift_base * T_base_retreat
-        self.moveit.goto(T_base_lift * self.grasp_ee_offset)
+        #self.moveit.goto(T_base_lift * self.grasp_ee_offset)
+        
 
         return 
 

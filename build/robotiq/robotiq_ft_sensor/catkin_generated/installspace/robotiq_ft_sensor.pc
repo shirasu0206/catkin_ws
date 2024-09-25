@@ -1,4 +1,4 @@
-prefix=/home/hi-ragi/catkin_ws/install
+prefix=/home/syu/catkin_ws/install
 
 Name: robotiq_ft_sensor
 Description: Description of robotiq_ft_sensor

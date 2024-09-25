@@ -1,2 +1,2 @@
 beginner_tutorials:robot_helpers:robotiq/robotiq:robotiq/robotiq_2f_140_gripper_gazebo:robotiq/robotiq_2f_140_gripper_visualization:robotiq/robotiq_2f_c2_gripper_visualization:robotiq/robotiq_2f_gripper_action_server:robotiq/robotiq_2f_gripper_control:robotiq/robotiq_ethercat:robotiq/robotiq_ft_sensor:robotiq/robotiq_modbus_rtu:robotiq/robotiq_modbus_tcp:vgn
--DCATKIN_DEVEL_PREFIX=/home/hi-ragi/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/hi-ragi/catkin_ws/install -G Unix Makefiles
+-DCATKIN_DEVEL_PREFIX=/home/syu/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/syu/catkin_ws/install -G Unix Makefiles

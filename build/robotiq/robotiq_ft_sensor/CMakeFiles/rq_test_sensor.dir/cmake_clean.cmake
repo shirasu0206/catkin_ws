@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/hi-ragi/catkin_ws/devel/lib/robotiq_ft_sensor/rq_test_sensor"
-  "/home/hi-ragi/catkin_ws/devel/lib/robotiq_ft_sensor/rq_test_sensor.pdb"
+  "/home/syu/catkin_ws/devel/lib/robotiq_ft_sensor/rq_test_sensor"
+  "/home/syu/catkin_ws/devel/lib/robotiq_ft_sensor/rq_test_sensor.pdb"
   "CMakeFiles/rq_test_sensor.dir/nodes/rq_test_sensor.cpp.o"
 )
 

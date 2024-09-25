@@ -1,4 +1,4 @@
-prefix=/home/hi-ragi/catkin_ws/devel
+prefix=/home/syu/catkin_ws/devel
 
 Name: beginner_tutorials
 Description: Description of beginner_tutorials

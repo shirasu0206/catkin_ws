@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/hi-ragi/catkin_ws/src/robotiq/robotiq_2f_gripper_action_server/src/robotiq_2f_gripper_action_server_client_test.cpp
+/home/syu/catkin_ws/src/robotiq/robotiq_2f_gripper_action_server/src/robotiq_2f_gripper_action_server_client_test.cpp
 ros/ros.h
 -
 actionlib/client/simple_action_client.h

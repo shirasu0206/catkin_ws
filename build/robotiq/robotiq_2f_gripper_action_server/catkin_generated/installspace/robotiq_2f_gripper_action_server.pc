@@ -1,4 +1,4 @@
-prefix=/home/hi-ragi/catkin_ws/install
+prefix=/home/syu/catkin_ws/install
 
 Name: robotiq_2f_gripper_action_server
 Description: Description of robotiq_2f_gripper_action_server

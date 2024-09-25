@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/hi-ragi/catkin_ws/devel/include/robotiq_2f_gripper_control/Robotiq2FGripper_robot_input.h
+/home/syu/catkin_ws/devel/include/robotiq_2f_gripper_control/Robotiq2FGripper_robot_input.h
 string
 -
 vector
@@ -22,7 +22,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/hi-ragi/catkin_ws/devel/include/robotiq_2f_gripper_control/Robotiq2FGripper_robot_output.h
+/home/syu/catkin_ws/devel/include/robotiq_2f_gripper_control/Robotiq2FGripper_robot_output.h
 string
 -
 vector
@@ -38,7 +38,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/hi-ragi/catkin_ws/src/robotiq/robotiq_2f_gripper_action_server/include/robotiq_2f_gripper_action_server/robotiq_2f_gripper_action_server.h
+/home/syu/catkin_ws/src/robotiq/robotiq_2f_gripper_action_server/include/robotiq_2f_gripper_action_server/robotiq_2f_gripper_action_server.h
 string
 -
 ros/ros.h
@@ -52,13 +52,13 @@ robotiq_2f_gripper_control/Robotiq2FGripper_robot_input.h
 robotiq_2f_gripper_control/Robotiq2FGripper_robot_output.h
 -
 
-/home/hi-ragi/catkin_ws/src/robotiq/robotiq_2f_gripper_action_server/src/robotiq_2f_gripper_action_server.cpp
+/home/syu/catkin_ws/src/robotiq/robotiq_2f_gripper_action_server/src/robotiq_2f_gripper_action_server.cpp
 robotiq_2f_gripper_action_server/robotiq_2f_gripper_action_server.h
-/home/hi-ragi/catkin_ws/src/robotiq/robotiq_2f_gripper_action_server/src/robotiq_2f_gripper_action_server/robotiq_2f_gripper_action_server.h
+/home/syu/catkin_ws/src/robotiq/robotiq_2f_gripper_action_server/src/robotiq_2f_gripper_action_server/robotiq_2f_gripper_action_server.h
 
-/home/hi-ragi/catkin_ws/src/robotiq/robotiq_2f_gripper_action_server/src/robotiq_2f_gripper_action_server_node.cpp
+/home/syu/catkin_ws/src/robotiq/robotiq_2f_gripper_action_server/src/robotiq_2f_gripper_action_server_node.cpp
 robotiq_2f_gripper_action_server/robotiq_2f_gripper_action_server.h
-/home/hi-ragi/catkin_ws/src/robotiq/robotiq_2f_gripper_action_server/src/robotiq_2f_gripper_action_server/robotiq_2f_gripper_action_server.h
+/home/syu/catkin_ws/src/robotiq/robotiq_2f_gripper_action_server/src/robotiq_2f_gripper_action_server/robotiq_2f_gripper_action_server.h
 
 /opt/ros/noetic/include/actionlib/action_definition.h
 

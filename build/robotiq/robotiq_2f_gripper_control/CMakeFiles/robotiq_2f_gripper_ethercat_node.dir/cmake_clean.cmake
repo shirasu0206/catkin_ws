@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/hi-ragi/catkin_ws/devel/lib/robotiq_2f_gripper_control/robotiq_2f_gripper_ethercat_node"
-  "/home/hi-ragi/catkin_ws/devel/lib/robotiq_2f_gripper_control/robotiq_2f_gripper_ethercat_node.pdb"
+  "/home/syu/catkin_ws/devel/lib/robotiq_2f_gripper_control/robotiq_2f_gripper_ethercat_node"
+  "/home/syu/catkin_ws/devel/lib/robotiq_2f_gripper_control/robotiq_2f_gripper_ethercat_node.pdb"
   "CMakeFiles/robotiq_2f_gripper_ethercat_node.dir/src/robotiq_2f_gripper_control/robotiq_2f_gripper_ethercat_client.cpp.o"
   "CMakeFiles/robotiq_2f_gripper_ethercat_node.dir/src/robotiq_2f_gripper_control/robotiq_2f_gripper_ethercat_node.cpp.o"
 )

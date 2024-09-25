@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
-# Source directory: /home/hi-ragi/catkin_ws/src/beginner_tutorials
-# Build directory: /home/hi-ragi/catkin_ws/build/beginner_tutorials
+# Source directory: /home/syu/catkin_ws/src/beginner_tutorials
+# Build directory: /home/syu/catkin_ws/build/beginner_tutorials
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/hi-ragi/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/syu/catkin_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/hi-ragi/catkin_ws/build
+CMAKE_BINARY_DIR = /home/syu/catkin_ws/build
 
 # Utility rule file for vgn_generate_messages.
 
@@ -63,10 +63,10 @@ vgn/CMakeFiles/vgn_generate_messages.dir/build: vgn_generate_messages
 .PHONY : vgn/CMakeFiles/vgn_generate_messages.dir/build
 
 vgn/CMakeFiles/vgn_generate_messages.dir/clean:
-	cd /home/hi-ragi/catkin_ws/build/vgn && $(CMAKE_COMMAND) -P CMakeFiles/vgn_generate_messages.dir/cmake_clean.cmake
+	cd /home/syu/catkin_ws/build/vgn && $(CMAKE_COMMAND) -P CMakeFiles/vgn_generate_messages.dir/cmake_clean.cmake
 .PHONY : vgn/CMakeFiles/vgn_generate_messages.dir/clean
 
 vgn/CMakeFiles/vgn_generate_messages.dir/depend:
-	cd /home/hi-ragi/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hi-ragi/catkin_ws/src /home/hi-ragi/catkin_ws/src/vgn /home/hi-ragi/catkin_ws/build /home/hi-ragi/catkin_ws/build/vgn /home/hi-ragi/catkin_ws/build/vgn/CMakeFiles/vgn_generate_messages.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/syu/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/syu/catkin_ws/src /home/syu/catkin_ws/src/vgn /home/syu/catkin_ws/build /home/syu/catkin_ws/build/vgn /home/syu/catkin_ws/build/vgn/CMakeFiles/vgn_generate_messages.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : vgn/CMakeFiles/vgn_generate_messages.dir/depend
 

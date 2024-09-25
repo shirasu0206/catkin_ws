@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/hi-ragi/catkin_ws/devel/lib/python3/dist-packages/robotiq_2f_gripper_control/msg/_Robotiq2FGripper_robot_input.py"
-  "/home/hi-ragi/catkin_ws/devel/lib/python3/dist-packages/robotiq_2f_gripper_control/msg/_Robotiq2FGripper_robot_output.py"
-  "/home/hi-ragi/catkin_ws/devel/lib/python3/dist-packages/robotiq_2f_gripper_control/msg/__init__.py"
+  "/home/syu/catkin_ws/devel/lib/python3/dist-packages/robotiq_2f_gripper_control/msg/_Robotiq2FGripper_robot_input.py"
+  "/home/syu/catkin_ws/devel/lib/python3/dist-packages/robotiq_2f_gripper_control/msg/_Robotiq2FGripper_robot_output.py"
+  "/home/syu/catkin_ws/devel/lib/python3/dist-packages/robotiq_2f_gripper_control/msg/__init__.py"
   "CMakeFiles/robotiq_2f_gripper_control_generate_messages_py"
 )
 

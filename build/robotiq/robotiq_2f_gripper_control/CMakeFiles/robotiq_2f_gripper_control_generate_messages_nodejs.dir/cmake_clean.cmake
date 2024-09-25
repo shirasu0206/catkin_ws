@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/hi-ragi/catkin_ws/devel/share/gennodejs/ros/robotiq_2f_gripper_control/msg/Robotiq2FGripper_robot_input.js"
-  "/home/hi-ragi/catkin_ws/devel/share/gennodejs/ros/robotiq_2f_gripper_control/msg/Robotiq2FGripper_robot_output.js"
+  "/home/syu/catkin_ws/devel/share/gennodejs/ros/robotiq_2f_gripper_control/msg/Robotiq2FGripper_robot_input.js"
+  "/home/syu/catkin_ws/devel/share/gennodejs/ros/robotiq_2f_gripper_control/msg/Robotiq2FGripper_robot_output.js"
   "CMakeFiles/robotiq_2f_gripper_control_generate_messages_nodejs"
 )
 

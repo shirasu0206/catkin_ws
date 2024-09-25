@@ -1,8 +1,8 @@
 # generated from catkin/cmake/template/pkg.context.pc.in
 CATKIN_PACKAGE_PREFIX = ""
-PROJECT_PKG_CONFIG_INCLUDE_DIRS = "/home/hi-ragi/catkin_ws/src/robotiq/robotiq_ethercat/include".split(';') if "/home/hi-ragi/catkin_ws/src/robotiq/robotiq_ethercat/include" != "" else []
+PROJECT_PKG_CONFIG_INCLUDE_DIRS = "/home/syu/catkin_ws/src/robotiq/robotiq_ethercat/include".split(';') if "/home/syu/catkin_ws/src/robotiq/robotiq_ethercat/include" != "" else []
 PROJECT_CATKIN_DEPENDS = "roscpp;soem".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "-lrobotiq_ethercat".split(';') if "-lrobotiq_ethercat" != "" else []
 PROJECT_NAME = "robotiq_ethercat"
-PROJECT_SPACE_DIR = "/home/hi-ragi/catkin_ws/devel"
+PROJECT_SPACE_DIR = "/home/syu/catkin_ws/devel"
 PROJECT_VERSION = "1.0.0"

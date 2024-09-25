@@ -1,8 +1,8 @@
-# Install script for directory: /home/hi-ragi/catkin_ws/src/vgn
+# Install script for directory: /home/syu/catkin_ws/src/vgn
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/hi-ragi/catkin_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/syu/catkin_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,50 +38,50 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/home/hi-ragi/catkin_ws/build/vgn/catkin_generated/safe_execute_install.cmake")
+  include("/home/syu/catkin_ws/build/vgn/catkin_generated/safe_execute_install.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/vgn/msg" TYPE FILE FILES "/home/hi-ragi/catkin_ws/src/vgn/msg/GraspConfig.msg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/vgn/msg" TYPE FILE FILES "/home/syu/catkin_ws/src/vgn/msg/GraspConfig.msg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/vgn/srv" TYPE FILE FILES
-    "/home/hi-ragi/catkin_ws/src/vgn/srv/GetMapCloud.srv"
-    "/home/hi-ragi/catkin_ws/src/vgn/srv/GetSceneCloud.srv"
-    "/home/hi-ragi/catkin_ws/src/vgn/srv/PredictGrasps.srv"
+    "/home/syu/catkin_ws/src/vgn/srv/GetMapCloud.srv"
+    "/home/syu/catkin_ws/src/vgn/srv/GetSceneCloud.srv"
+    "/home/syu/catkin_ws/src/vgn/srv/PredictGrasps.srv"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/vgn/cmake" TYPE FILE FILES "/home/hi-ragi/catkin_ws/build/vgn/catkin_generated/installspace/vgn-msg-paths.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/vgn/cmake" TYPE FILE FILES "/home/syu/catkin_ws/build/vgn/catkin_generated/installspace/vgn-msg-paths.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/hi-ragi/catkin_ws/devel/include/vgn")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/syu/catkin_ws/devel/include/vgn")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/hi-ragi/catkin_ws/devel/share/roseus/ros/vgn")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/syu/catkin_ws/devel/share/roseus/ros/vgn")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/hi-ragi/catkin_ws/devel/share/common-lisp/ros/vgn")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/syu/catkin_ws/devel/share/common-lisp/ros/vgn")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/hi-ragi/catkin_ws/devel/share/gennodejs/ros/vgn")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/syu/catkin_ws/devel/share/gennodejs/ros/vgn")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/hi-ragi/catkin_ws/devel/lib/python3/dist-packages/vgn")
+  execute_process(COMMAND "/home/syu/catkin_ws/src/vgn/.venv/bin/python3" -m compileall "/home/syu/catkin_ws/devel/lib/python3/dist-packages/vgn")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/hi-ragi/catkin_ws/devel/lib/python3/dist-packages/vgn" REGEX "/\\_\\_init\\_\\_\\.py$" EXCLUDE REGEX "/\\_\\_init\\_\\_\\.pyc$" EXCLUDE)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/syu/catkin_ws/devel/lib/python3/dist-packages/vgn" REGEX "/\\_\\_init\\_\\_\\.py$" EXCLUDE REGEX "/\\_\\_init\\_\\_\\.pyc$" EXCLUDE)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/hi-ragi/catkin_ws/devel/lib/python3/dist-packages/vgn" FILES_MATCHING REGEX "/home/hi-ragi/catkin_ws/devel/lib/python3/dist-packages/vgn/.+/__init__.pyc?$")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/syu/catkin_ws/devel/lib/python3/dist-packages/vgn" FILES_MATCHING REGEX "/home/syu/catkin_ws/devel/lib/python3/dist-packages/vgn/.+/__init__.pyc?$")
 endif()
 

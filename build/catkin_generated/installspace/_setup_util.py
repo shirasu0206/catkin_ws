@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/home/syu/catkin_ws/src/vgn/.venv/bin/python3
 # -*- coding: utf-8 -*-
 
 # Software License Agreement (BSD License)
@@ -268,7 +268,7 @@ if __name__ == '__main__':
 
         if not args.local:
             # environment at generation time
-            CMAKE_PREFIX_PATH = r'/home/hi-ragi/catkin_ws/devel;/home/hi-ragi/ur5e_handeye_ws/devel;/home/hi-ragi/catkin_ws/devel;/home/hi-ragi/ur5e_ws/devel;/home/hi-ragi/catkin_ws/devel;/home/hi-ragi/other_ws/devel;/home/hi-ragi/catkin_ws/devel;/opt/ros/noetic'.split(';')
+            CMAKE_PREFIX_PATH = r'/home/syu/catkin_ws/devel;/opt/ros/noetic'.split(';')
         else:
             # don't consider any other prefix path than this one
             CMAKE_PREFIX_PATH = []

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/hi-ragi/catkin_ws/devel/share/common-lisp/ros/robotiq_ft_sensor/msg/ft_sensor.lisp"
-  "/home/hi-ragi/catkin_ws/devel/share/common-lisp/ros/robotiq_ft_sensor/srv/sensor_accessor.lisp"
+  "/home/syu/catkin_ws/devel/share/common-lisp/ros/robotiq_ft_sensor/msg/ft_sensor.lisp"
+  "/home/syu/catkin_ws/devel/share/common-lisp/ros/robotiq_ft_sensor/srv/sensor_accessor.lisp"
   "CMakeFiles/robotiq_ft_sensor_generate_messages_lisp"
 )
 

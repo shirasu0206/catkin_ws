@@ -1,8 +1,8 @@
-# Install script for directory: /home/hi-ragi/catkin_ws/src/robot_helpers
+# Install script for directory: /home/syu/catkin_ws/src/robot_helpers
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/hi-ragi/catkin_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/syu/catkin_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,6 +38,6 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/home/hi-ragi/catkin_ws/build/robot_helpers/catkin_generated/safe_execute_install.cmake")
+  include("/home/syu/catkin_ws/build/robot_helpers/catkin_generated/safe_execute_install.cmake")
 endif()
 

@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/hi-ragi/catkin_ws/src/robotiq/robotiq_ethercat/include/robotiq_ethercat/ethercat_manager.h
+/home/syu/catkin_ws/src/robotiq/robotiq_ethercat/include/robotiq_ethercat/ethercat_manager.h
 stdexcept
 -
 string
@@ -20,9 +20,9 @@ boost/thread.hpp
 boost/thread/mutex.hpp
 -
 
-/home/hi-ragi/catkin_ws/src/robotiq/robotiq_ethercat/src/ethercat_manager.cpp
+/home/syu/catkin_ws/src/robotiq/robotiq_ethercat/src/ethercat_manager.cpp
 robotiq_ethercat/ethercat_manager.h
-/home/hi-ragi/catkin_ws/src/robotiq/robotiq_ethercat/src/robotiq_ethercat/ethercat_manager.h
+/home/syu/catkin_ws/src/robotiq/robotiq_ethercat/src/robotiq_ethercat/ethercat_manager.h
 string.h
 -
 unistd.h

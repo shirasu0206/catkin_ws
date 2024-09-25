@@ -9,7 +9,7 @@
   </include>
 
   <!-- Broadcast task transform -->
-  <node pkg="tf2_ros" type="static_transform_publisher" name="task_frame_broadcaster" args="0.12 -0.91 0.195  0 0.7071 0.7071 0 base_link task" />
+  <node pkg="tf2_ros" type="static_transform_publisher" name="task_frame_broadcaster" args="-0.03 -0.98 0.03  0 0.7071 0.7071 0 base_link task" />
 
   <!-- Load configuration -->
   <rosparam command="load" file="$(find vgn)/cfg/hw/ur5e_drawer_grasp.yaml" subst_value="true" />

@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/hi-ragi/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/syu/catkin_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/hi-ragi/catkin_ws/build
+CMAKE_BINARY_DIR = /home/syu/catkin_ws/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -115,8 +115,8 @@ rebuild_cache/fast: rebuild_cache
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -137,14 +137,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/hi-ragi/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/hi-ragi/catkin_ws/build/CMakeFiles /home/hi-ragi/catkin_ws/build/robotiq/robotiq_ethercat/CMakeFiles/progress.marks
-	cd /home/hi-ragi/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq/robotiq_ethercat/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hi-ragi/catkin_ws/build/CMakeFiles 0
+	cd /home/syu/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/syu/catkin_ws/build/CMakeFiles /home/syu/catkin_ws/build/robotiq/robotiq_ethercat/CMakeFiles/progress.marks
+	cd /home/syu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq/robotiq_ethercat/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/syu/catkin_ws/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/hi-ragi/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq/robotiq_ethercat/clean
+	cd /home/syu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq/robotiq_ethercat/clean
 .PHONY : clean
 
 # The main clean target
@@ -154,22 +154,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/hi-ragi/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq/robotiq_ethercat/preinstall
+	cd /home/syu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq/robotiq_ethercat/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/hi-ragi/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq/robotiq_ethercat/preinstall
+	cd /home/syu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq/robotiq_ethercat/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/hi-ragi/catkin_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/syu/catkin_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 robotiq/robotiq_ethercat/CMakeFiles/robotiq_ethercat.dir/rule:
-	cd /home/hi-ragi/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq/robotiq_ethercat/CMakeFiles/robotiq_ethercat.dir/rule
+	cd /home/syu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq/robotiq_ethercat/CMakeFiles/robotiq_ethercat.dir/rule
 .PHONY : robotiq/robotiq_ethercat/CMakeFiles/robotiq_ethercat.dir/rule
 
 # Convenience name for target.
@@ -179,7 +179,7 @@ robotiq_ethercat: robotiq/robotiq_ethercat/CMakeFiles/robotiq_ethercat.dir/rule
 
 # fast build rule for target.
 robotiq_ethercat/fast:
-	cd /home/hi-ragi/catkin_ws/build && $(MAKE) -f robotiq/robotiq_ethercat/CMakeFiles/robotiq_ethercat.dir/build.make robotiq/robotiq_ethercat/CMakeFiles/robotiq_ethercat.dir/build
+	cd /home/syu/catkin_ws/build && $(MAKE) -f robotiq/robotiq_ethercat/CMakeFiles/robotiq_ethercat.dir/build.make robotiq/robotiq_ethercat/CMakeFiles/robotiq_ethercat.dir/build
 .PHONY : robotiq_ethercat/fast
 
 src/ethercat_manager.o: src/ethercat_manager.cpp.o
@@ -188,7 +188,7 @@ src/ethercat_manager.o: src/ethercat_manager.cpp.o
 
 # target to build an object file
 src/ethercat_manager.cpp.o:
-	cd /home/hi-ragi/catkin_ws/build && $(MAKE) -f robotiq/robotiq_ethercat/CMakeFiles/robotiq_ethercat.dir/build.make robotiq/robotiq_ethercat/CMakeFiles/robotiq_ethercat.dir/src/ethercat_manager.cpp.o
+	cd /home/syu/catkin_ws/build && $(MAKE) -f robotiq/robotiq_ethercat/CMakeFiles/robotiq_ethercat.dir/build.make robotiq/robotiq_ethercat/CMakeFiles/robotiq_ethercat.dir/src/ethercat_manager.cpp.o
 .PHONY : src/ethercat_manager.cpp.o
 
 src/ethercat_manager.i: src/ethercat_manager.cpp.i
@@ -197,7 +197,7 @@ src/ethercat_manager.i: src/ethercat_manager.cpp.i
 
 # target to preprocess a source file
 src/ethercat_manager.cpp.i:
-	cd /home/hi-ragi/catkin_ws/build && $(MAKE) -f robotiq/robotiq_ethercat/CMakeFiles/robotiq_ethercat.dir/build.make robotiq/robotiq_ethercat/CMakeFiles/robotiq_ethercat.dir/src/ethercat_manager.cpp.i
+	cd /home/syu/catkin_ws/build && $(MAKE) -f robotiq/robotiq_ethercat/CMakeFiles/robotiq_ethercat.dir/build.make robotiq/robotiq_ethercat/CMakeFiles/robotiq_ethercat.dir/src/ethercat_manager.cpp.i
 .PHONY : src/ethercat_manager.cpp.i
 
 src/ethercat_manager.s: src/ethercat_manager.cpp.s
@@ -206,7 +206,7 @@ src/ethercat_manager.s: src/ethercat_manager.cpp.s
 
 # target to generate assembly for a file
 src/ethercat_manager.cpp.s:
-	cd /home/hi-ragi/catkin_ws/build && $(MAKE) -f robotiq/robotiq_ethercat/CMakeFiles/robotiq_ethercat.dir/build.make robotiq/robotiq_ethercat/CMakeFiles/robotiq_ethercat.dir/src/ethercat_manager.cpp.s
+	cd /home/syu/catkin_ws/build && $(MAKE) -f robotiq/robotiq_ethercat/CMakeFiles/robotiq_ethercat.dir/build.make robotiq/robotiq_ethercat/CMakeFiles/robotiq_ethercat.dir/src/ethercat_manager.cpp.s
 .PHONY : src/ethercat_manager.cpp.s
 
 # Help Target
@@ -237,6 +237,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/hi-ragi/catkin_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/syu/catkin_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/hi-ragi/catkin_ws/devel/share/roseus/ros/robotiq_ft_sensor/manifest.l"
-  "/home/hi-ragi/catkin_ws/devel/share/roseus/ros/robotiq_ft_sensor/msg/ft_sensor.l"
-  "/home/hi-ragi/catkin_ws/devel/share/roseus/ros/robotiq_ft_sensor/srv/sensor_accessor.l"
+  "/home/syu/catkin_ws/devel/share/roseus/ros/robotiq_ft_sensor/manifest.l"
+  "/home/syu/catkin_ws/devel/share/roseus/ros/robotiq_ft_sensor/msg/ft_sensor.l"
+  "/home/syu/catkin_ws/devel/share/roseus/ros/robotiq_ft_sensor/srv/sensor_accessor.l"
   "CMakeFiles/robotiq_ft_sensor_generate_messages_eus"
 )
 

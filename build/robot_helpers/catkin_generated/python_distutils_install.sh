@@ -13,21 +13,21 @@ fi
 
 echo_and_run() { echo "+ $@" ; "$@" ; }
 
-echo_and_run cd "/home/hi-ragi/catkin_ws/src/robot_helpers"
+echo_and_run cd "/home/syu/catkin_ws/src/robot_helpers"
 
 # ensure that Python install destination exists
-echo_and_run mkdir -p "$DESTDIR/home/hi-ragi/catkin_ws/install/lib/python3/dist-packages"
+echo_and_run mkdir -p "$DESTDIR/home/syu/catkin_ws/install/lib/python3/dist-packages"
 
 # Note that PYTHONPATH is pulled from the environment to support installing
 # into one location when some dependencies were installed in another
 # location, #123.
 echo_and_run /usr/bin/env \
-    PYTHONPATH="/home/hi-ragi/catkin_ws/install/lib/python3/dist-packages:/home/hi-ragi/catkin_ws/build/lib/python3/dist-packages:$PYTHONPATH" \
-    CATKIN_BINARY_DIR="/home/hi-ragi/catkin_ws/build" \
-    "/usr/bin/python3" \
-    "/home/hi-ragi/catkin_ws/src/robot_helpers/setup.py" \
+    PYTHONPATH="/home/syu/catkin_ws/install/lib/python3/dist-packages:/home/syu/catkin_ws/build/lib/python3/dist-packages:$PYTHONPATH" \
+    CATKIN_BINARY_DIR="/home/syu/catkin_ws/build" \
+    "/home/syu/catkin_ws/src/vgn/.venv/bin/python3" \
+    "/home/syu/catkin_ws/src/robot_helpers/setup.py" \
      \
-    build --build-base "/home/hi-ragi/catkin_ws/build/robot_helpers" \
+    build --build-base "/home/syu/catkin_ws/build/robot_helpers" \
     install \
     --root="${DESTDIR-/}" \
-    --install-layout=deb --prefix="/home/hi-ragi/catkin_ws/install" --install-scripts="/home/hi-ragi/catkin_ws/install/bin"
+    --install-layout=deb --prefix="/home/syu/catkin_ws/install" --install-scripts="/home/syu/catkin_ws/install/bin"

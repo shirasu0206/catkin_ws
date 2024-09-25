@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/hi-ragi/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/syu/catkin_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/hi-ragi/catkin_ws/build
+CMAKE_BINARY_DIR = /home/syu/catkin_ws/build
 
 # Utility rule file for robotiq_2f_gripper_control_gennodejs.
 
@@ -63,10 +63,10 @@ robotiq/robotiq_2f_gripper_control/CMakeFiles/robotiq_2f_gripper_control_gennode
 .PHONY : robotiq/robotiq_2f_gripper_control/CMakeFiles/robotiq_2f_gripper_control_gennodejs.dir/build
 
 robotiq/robotiq_2f_gripper_control/CMakeFiles/robotiq_2f_gripper_control_gennodejs.dir/clean:
-	cd /home/hi-ragi/catkin_ws/build/robotiq/robotiq_2f_gripper_control && $(CMAKE_COMMAND) -P CMakeFiles/robotiq_2f_gripper_control_gennodejs.dir/cmake_clean.cmake
+	cd /home/syu/catkin_ws/build/robotiq/robotiq_2f_gripper_control && $(CMAKE_COMMAND) -P CMakeFiles/robotiq_2f_gripper_control_gennodejs.dir/cmake_clean.cmake
 .PHONY : robotiq/robotiq_2f_gripper_control/CMakeFiles/robotiq_2f_gripper_control_gennodejs.dir/clean
 
 robotiq/robotiq_2f_gripper_control/CMakeFiles/robotiq_2f_gripper_control_gennodejs.dir/depend:
-	cd /home/hi-ragi/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hi-ragi/catkin_ws/src /home/hi-ragi/catkin_ws/src/robotiq/robotiq_2f_gripper_control /home/hi-ragi/catkin_ws/build /home/hi-ragi/catkin_ws/build/robotiq/robotiq_2f_gripper_control /home/hi-ragi/catkin_ws/build/robotiq/robotiq_2f_gripper_control/CMakeFiles/robotiq_2f_gripper_control_gennodejs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/syu/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/syu/catkin_ws/src /home/syu/catkin_ws/src/robotiq/robotiq_2f_gripper_control /home/syu/catkin_ws/build /home/syu/catkin_ws/build/robotiq/robotiq_2f_gripper_control /home/syu/catkin_ws/build/robotiq/robotiq_2f_gripper_control/CMakeFiles/robotiq_2f_gripper_control_gennodejs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : robotiq/robotiq_2f_gripper_control/CMakeFiles/robotiq_2f_gripper_control_gennodejs.dir/depend
 

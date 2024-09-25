@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/hi-ragi/catkin_ws/devel/share/common-lisp/ros/robotiq_2f_gripper_control/msg/Robotiq2FGripper_robot_input.lisp"
-  "/home/hi-ragi/catkin_ws/devel/share/common-lisp/ros/robotiq_2f_gripper_control/msg/Robotiq2FGripper_robot_output.lisp"
+  "/home/syu/catkin_ws/devel/share/common-lisp/ros/robotiq_2f_gripper_control/msg/Robotiq2FGripper_robot_input.lisp"
+  "/home/syu/catkin_ws/devel/share/common-lisp/ros/robotiq_2f_gripper_control/msg/Robotiq2FGripper_robot_output.lisp"
   "CMakeFiles/robotiq_2f_gripper_control_generate_messages_lisp"
 )
 

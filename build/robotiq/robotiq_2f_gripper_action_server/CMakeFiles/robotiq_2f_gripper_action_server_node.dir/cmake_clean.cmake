@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/hi-ragi/catkin_ws/devel/lib/robotiq_2f_gripper_action_server/robotiq_2f_gripper_action_server_node"
-  "/home/hi-ragi/catkin_ws/devel/lib/robotiq_2f_gripper_action_server/robotiq_2f_gripper_action_server_node.pdb"
+  "/home/syu/catkin_ws/devel/lib/robotiq_2f_gripper_action_server/robotiq_2f_gripper_action_server_node"
+  "/home/syu/catkin_ws/devel/lib/robotiq_2f_gripper_action_server/robotiq_2f_gripper_action_server_node.pdb"
   "CMakeFiles/robotiq_2f_gripper_action_server_node.dir/src/robotiq_2f_gripper_action_server.cpp.o"
   "CMakeFiles/robotiq_2f_gripper_action_server_node.dir/src/robotiq_2f_gripper_action_server_node.cpp.o"
 )

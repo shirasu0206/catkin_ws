@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/hi-ragi/catkin_ws/devel/share/gennodejs/ros/robotiq_ft_sensor/msg/ft_sensor.js"
-  "/home/hi-ragi/catkin_ws/devel/share/gennodejs/ros/robotiq_ft_sensor/srv/sensor_accessor.js"
+  "/home/syu/catkin_ws/devel/share/gennodejs/ros/robotiq_ft_sensor/msg/ft_sensor.js"
+  "/home/syu/catkin_ws/devel/share/gennodejs/ros/robotiq_ft_sensor/srv/sensor_accessor.js"
   "CMakeFiles/robotiq_ft_sensor_generate_messages_nodejs"
 )
 

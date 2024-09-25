@@ -67,14 +67,14 @@ set(robotiq_2f_gripper_control_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(robotiq_2f_gripper_control_SOURCE_PREFIX /home/hi-ragi/catkin_ws/src/robotiq/robotiq_2f_gripper_control)
-  set(robotiq_2f_gripper_control_DEVEL_PREFIX /home/hi-ragi/catkin_ws/devel)
+  set(robotiq_2f_gripper_control_SOURCE_PREFIX /home/syu/catkin_ws/src/robotiq/robotiq_2f_gripper_control)
+  set(robotiq_2f_gripper_control_DEVEL_PREFIX /home/syu/catkin_ws/devel)
   set(robotiq_2f_gripper_control_INSTALL_PREFIX "")
   set(robotiq_2f_gripper_control_PREFIX ${robotiq_2f_gripper_control_DEVEL_PREFIX})
 else()
   set(robotiq_2f_gripper_control_SOURCE_PREFIX "")
   set(robotiq_2f_gripper_control_DEVEL_PREFIX "")
-  set(robotiq_2f_gripper_control_INSTALL_PREFIX /home/hi-ragi/catkin_ws/install)
+  set(robotiq_2f_gripper_control_INSTALL_PREFIX /home/syu/catkin_ws/install)
   set(robotiq_2f_gripper_control_PREFIX ${robotiq_2f_gripper_control_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(robotiq_2f_gripper_control_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/hi-ragi/catkin_ws/devel/include;/home/hi-ragi/catkin_ws/src/robotiq/robotiq_2f_gripper_control/include " STREQUAL " ")
+if(NOT "/home/syu/catkin_ws/devel/include;/home/syu/catkin_ws/src/robotiq/robotiq_2f_gripper_control/include " STREQUAL " ")
   set(robotiq_2f_gripper_control_INCLUDE_DIRS "")
-  set(_include_dirs "/home/hi-ragi/catkin_ws/devel/include;/home/hi-ragi/catkin_ws/src/robotiq/robotiq_2f_gripper_control/include")
+  set(_include_dirs "/home/syu/catkin_ws/devel/include;/home/syu/catkin_ws/src/robotiq/robotiq_2f_gripper_control/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT "http://ros.org/wiki/robotiq " STREQUAL " ")
@@ -110,7 +110,7 @@ if(NOT "/home/hi-ragi/catkin_ws/devel/include;/home/hi-ragi/catkin_ws/src/roboti
         message(FATAL_ERROR "Project 'robotiq_2f_gripper_control' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'robotiq_2f_gripper_control' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/hi-ragi/catkin_ws/src/robotiq/robotiq_2f_gripper_control/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'robotiq_2f_gripper_control' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/syu/catkin_ws/src/robotiq/robotiq_2f_gripper_control/${idir}'.  ${_report}")
     endif()
     _list_append_unique(robotiq_2f_gripper_control_INCLUDE_DIRS ${include})
   endforeach()
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/hi-ragi/catkin_ws/devel/lib;/home/hi-ragi/catkin_ws/devel/lib;/home/hi-ragi/ur5e_handeye_ws/devel/lib;/home/hi-ragi/ur5e_ws/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/syu/catkin_ws/devel/lib;/home/syu/catkin_ws/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

@@ -67,14 +67,14 @@ set(robotiq_2f_gripper_control_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(robotiq_2f_gripper_control_SOURCE_PREFIX /home/hi-ragi/catkin_ws/src/robotiq/robotiq_2f_gripper_control)
-  set(robotiq_2f_gripper_control_DEVEL_PREFIX /home/hi-ragi/catkin_ws/devel)
+  set(robotiq_2f_gripper_control_SOURCE_PREFIX /home/syu/catkin_ws/src/robotiq/robotiq_2f_gripper_control)
+  set(robotiq_2f_gripper_control_DEVEL_PREFIX /home/syu/catkin_ws/devel)
   set(robotiq_2f_gripper_control_INSTALL_PREFIX "")
   set(robotiq_2f_gripper_control_PREFIX ${robotiq_2f_gripper_control_DEVEL_PREFIX})
 else()
   set(robotiq_2f_gripper_control_SOURCE_PREFIX "")
   set(robotiq_2f_gripper_control_DEVEL_PREFIX "")
-  set(robotiq_2f_gripper_control_INSTALL_PREFIX /home/hi-ragi/catkin_ws/install)
+  set(robotiq_2f_gripper_control_INSTALL_PREFIX /home/syu/catkin_ws/install)
   set(robotiq_2f_gripper_control_PREFIX ${robotiq_2f_gripper_control_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/hi-ragi/catkin_ws/install/lib;/home/hi-ragi/catkin_ws/devel/lib;/home/hi-ragi/ur5e_handeye_ws/devel/lib;/home/hi-ragi/ur5e_ws/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/syu/catkin_ws/install/lib;/home/syu/catkin_ws/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
