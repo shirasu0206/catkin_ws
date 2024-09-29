@@ -1,0 +1,14 @@
+# リクエスト: 引き出しの検出リクエスト
+sensor_msgs/Image rgb_image   # RGB画像
+sensor_msgs/Image depth_image # 深度画像
+---
+# レスポンス: 検出された引き出しの位置と姿勢
+float64 x
+float64 y
+float64 z
+float64 qx
+float64 qy
+float64 qz
+float64 qw
+string drawer_type  # 引き出しの種類（convex, concave, side_concave）
+string result       # 結果メッセージ

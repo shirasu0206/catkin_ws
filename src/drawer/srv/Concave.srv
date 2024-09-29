@@ -1,0 +1,12 @@
+# リクエスト: Concave引き出しの情報リクエスト
+sensor_msgs/Image mask  # セグメンテーションマスク
+---
+# レスポンス: Concave引き出しの位置情報
+float64 x
+float64 y
+float64 z
+float64 qx
+float64 qy
+float64 qz
+float64 qw
+string result  # 結果メッセージ

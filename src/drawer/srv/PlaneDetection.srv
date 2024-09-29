@@ -1,0 +1,12 @@
+# リクエスト: 平面検出リクエスト
+sensor_msgs/Image depth_image  # 深度画像を渡す
+---
+# レスポンス: 検出された平面の位置と姿勢を返す
+float64 x
+float64 y
+float64 z
+float64 qx
+float64 qy
+float64 qz
+float64 qw
+string result  # 結果メッセージ

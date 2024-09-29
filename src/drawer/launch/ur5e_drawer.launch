@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<launch>
+  <arg name="launch_rviz" default="true" />
+
+  <!-- カメラドライバの起動（RealSenseを使用） -->
+  <include file="$(find realsense2_camera)/launch/rs_camera.launch">
+    <arg name="enable_pointcloud" value="true" />
+    <arg name="publish_tf" value="false" />
+  </include>
+
+  <!-- 静的なタスクフレームのブロードキャスト -->
+  <node pkg="tf2_ros" type="static_transform_publisher" name="task_frame_broadcaster" args="0.05 -0.35 0.05 0 0 0 1 base_link task" />
+
+  <!-- Configのロード -->
+  <rosparam command="load" file="$(find drawer)/cfg/hw/ur5e_drawer.yaml" subst_value="true" />
+
+  <!-- drawerのノードの起動 -->
+  <node pkg="drawer" type="drawer_server.py" name="drawer_recognition_server" output="screen" />
+
+  <!-- VGNサーバーの起動 -->
+  <node pkg="vgn" type="tsdf_server.py" name="tsdf_server" output="screen" />
+  <node pkg="vgn" type="vgn_server.py" name="vgn_server" output="screen" />
+
+  <!-- RVizの起動 -->
+  <node if="$(arg launch_rviz)" pkg="rviz" type="rviz" name="rviz" args="-d $(find drawer)/config/drawer_recognition.rviz" />
+</launch>

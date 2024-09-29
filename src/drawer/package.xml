@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>drawer</name>
+  <version>0.0.1</version>
+  <description>Drawer recognition and manipulation package</description>
+
+  <maintainer email="syu_kato@example.com">Syu Kato</maintainer>
+  <license>BSD</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <!-- 依存関係の追加 -->
+  <build_depend>roscpp</build_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>visualization_msgs</build_depend>
+  <build_depend>message_generation</build_depend>  <!-- ここを追加 -->
+
+  <build_export_depend>roscpp</build_export_depend>
+  <build_export_depend>rospy</build_export_depend>
+  <build_export_depend>std_msgs</build_export_depend>
+
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>visualization_msgs</exec_depend>
+  <exec_depend>roscpp</exec_depend>
+  <exec_depend>rospy</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>message_runtime</exec_depend>  <!-- ここを追加 -->
+
+  <!-- 他の依存パッケージ（例: vgn）が必要な場合 -->
+  <depend>vgn</depend>  <!-- vgnの依存関係を追加 -->
+
+  <export>
+    <!-- 他のツールが必要とする追加情報をここに記述 -->
+  </export>
+</package>
