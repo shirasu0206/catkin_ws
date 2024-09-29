@@ -30,13 +30,13 @@ class DrawerServer:
             depth_image = self.bridge.imgmsg_to_cv2(depth_msg, desired_encoding="32FC1")  # Depth imageのエンコーディング
         except rospy.ROSException as e:
             rospy.logerr(f"Depth画像を取得できませんでした: {e}")
-            return PlaneDetectionResponse(x=0.0, y=0.0, z=0.0, qx=0.0, qy=0.0, qz=0.0, qw=1.0, result="Depth image not available")
+            return PlaneDetectionResponse(x=0.0, y=0.0, z=0.0, qx=0.0, qy=0.0, qz=0.0, qw=1.0, width=0.0, height=0.0, result="Depth image not available")
 
         # 平面推定を実行
-        position, quaternion = self.plane_detector.process_segmentation(segmentation_mask, depth_image)
+        position, quaternion, width, height = self.plane_detector.process_segmentation(segmentation_mask, depth_image)
 
         if position is not None:
-            rospy.loginfo(f"平面推定: {position}, クォータニオン: {quaternion}")
+            rospy.loginfo(f"平面推定: {position}, クォータニオン: {quaternion}, 幅: {width}, 高さ: {height}")
             return PlaneDetectionResponse(
                 x=position[0], 
                 y=position[1], 
@@ -45,6 +45,8 @@ class DrawerServer:
                 qy=quaternion[1], 
                 qz=quaternion[2], 
                 qw=quaternion[3], 
+                width=width,   # 幅を返す
+                height=height, # 高さを返す
                 result="Detection successful"
             )
         else:
@@ -57,6 +59,8 @@ class DrawerServer:
                 qy=0.0, 
                 qz=0.0, 
                 qw=1.0, 
+                width=0.0,   # 幅をデフォルトで0として返す
+                height=0.0,  # 高さをデフォルトで0として返す
                 result="Plane estimation failed"
             )
 

@@ -73,8 +73,11 @@ class UR5eMover:
                 qy = response.qy
                 qz = response.qz
                 qw = response.qw
+                width = response.width  # 幅を取得
+                height = response.height  # 高さを取得
                 rospy.loginfo(f"平面の座標を取得（カメラ座標系）: x={plane_x}, y={plane_y}, z={plane_z}")
                 rospy.loginfo(f"平面のクォータニオンを取得（カメラ座標系）: qx={qx}, qy={qy}, qz={qz}, qw={qw}")
+                rospy.loginfo(f"平面のサイズ: 幅={width} m, 高さ={height} m")
 
                 # PoseStampedメッセージを作成
                 pose_stamped = geometry_msgs.msg.PoseStamped()
@@ -104,7 +107,7 @@ class UR5eMover:
                 rospy.loginfo(f"平面の座標を取得（ベース座標系）: x={trans_x}, y={trans_y}, z={trans_z}")
                 rospy.loginfo(f"平面のクォータニオンを取得（ベース座標系）: qx={trans_qx}, qy={trans_qy}, qz={trans_qz}, qw={trans_qw}")
 
-                return trans_x, trans_y, trans_z, trans_qx, trans_qy, trans_qz, trans_qw
+                return trans_x, trans_y, trans_z, trans_qx, trans_qy, trans_qz, trans_qw, width, height
             else:
                 rospy.logerr("平面の座標が無効です")
                 return None
@@ -132,8 +135,9 @@ class UR5eMover:
         self.moveit.goto([1.647, -2.568, -2.2, 1.624, 1.491, 0])
         result = self.get_plane_coordinates()
         if result is not None:
-            plane_x, plane_y, plane_z, qx, qy, qz, qw = result
+            plane_x, plane_y, plane_z, qx, qy, qz, qw, width, height = result
             rospy.loginfo(f"取得した平面の座標とクォータニオン（ベース座標系）: ({plane_x}, {plane_y}, {plane_z}), ({qx}, {qy}, {qz}, {qw})")
+            rospy.loginfo(f"取得した平面のサイズ: 幅={width} m, 高さ={height} m")
             
             # 座標系をブロードキャスト
             self.broadcast_plane_frame(plane_x, plane_y, plane_z, qx, qy, qz, qw)

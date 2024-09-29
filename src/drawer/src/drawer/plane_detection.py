@@ -42,13 +42,13 @@ class PlaneDetection:
 
         # RANSACによる平面推定
         points = []
-        for v in range(masked_depth.shape[0]):
-            for u in range(masked_depth.shape[1]):
+        for v in range(0, masked_depth.shape[0], 2):  # 1/2の解像度で処理
+            for u in range(0, masked_depth.shape[1], 2):  # 1/2の解像度で処理
                 z = masked_depth[v, u]
                 if z > 0:
-                    x = (u - self.cx) * z / self.fx / 1000.0  # ミリメートルからメートルに変換
-                    y = (v - self.cy) * z / self.fy / 1000.0  # ミリメートルからメートルに変換
-                    z = z / 1000.0  # z軸もミリメートルからメートルに変換
+                    x = (u - self.cx) * z / self.fx / 1000.0
+                    y = (v - self.cy) * z / self.fy / 1000.0
+                    z = z / 1000.0
                     points.append([x, y, z])
 
         points = np.array(points)
@@ -58,11 +58,11 @@ class PlaneDetection:
 
         # RANSACによる平面推定
         X = points[:, :2]  # x, y座標
-        y = points[:, 2]   # z座標
+        z = points[:, 2]   # z座標
 
         model = LinearRegression()
-        ransac = RANSACRegressor(model, random_state=42)
-        ransac.fit(X, y)
+        ransac = RANSACRegressor(model, random_state=42, max_trials=100, residual_threshold=0.01)
+        ransac.fit(X, z)
 
         # 推定された平面のパラメータを取得
         inlier_mask = ransac.inlier_mask_
@@ -80,12 +80,17 @@ class PlaneDetection:
             np.min(plane_points[:, 0]),  # xが最小の値
             np.max(plane_points[:, 1]),  # yが最大の値
             np.min(plane_points[:, 2])   # zが最小の値（任意で調整可能）
-        ]) # 最小のx, y, z座標を持つ点を取得
+        ])
+
+        # 幅と高さを計算
+        width = np.max(plane_points[:, 0]) - np.min(plane_points[:, 0])  # x方向の幅
+        height = np.max(plane_points[:, 1]) - np.min(plane_points[:, 1])  # y方向の高さ
+
+        # 平面のサイズを出力
+        rospy.loginfo(f"平面の幅: {width:.3f} m, 高さ: {height:.3f} m")
 
         # クォータニオンの計算
         reference_vector = np.array([0, 0, 1])  # 参照ベクトル（Z軸）
-
-        # 回転軸の計算
         rotation_axis = np.cross(reference_vector, normal)
         rotation_axis_norm = np.linalg.norm(rotation_axis)
 
@@ -108,4 +113,4 @@ class PlaneDetection:
         # クォータニオンを取得（順序は[x, y, z, w]）
         qx, qy, qz, qw = rotation.as_quat()
 
-        return bottom_left_corner, (qx, qy, qz, qw)  # 左下の座標とクォータニオンを返す
+        return bottom_left_corner, (qx, qy, qz, qw), width, height  # 左下の座標、クォータニオン、幅、高さを返す
